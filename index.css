@@ -1,0 +1,359 @@
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+.card{
+  padding-left: 10px;
+  height: 50PX;
+  width: 300px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  transition: 400ms;
+  background-color: #dbd4d4;
+  
+ 
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+
+
+
+
+/*effect ta3 ki tselectionih ykber*/
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/*effect ta3 lokhrin ki maytsiliksyoniwch ysgharo*/
+.cards:hover > .card:not(:hover) {
+ transform: scale(0.9, 0.9);
+}
+
+
+
+
+
+
+
+.premium-wrapper {
+  
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  justify-items: center;
+  /*
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #ddd;
+  */
+}
+.Title{
+    margin: 20px auto;
+}
+.search-bar {
+  display: flex;
+  background-color: #f0f0f0;
+  border: 2px solid transparent;
+ 
+  padding: 15px;
+  
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  margin: auto;
+
+}
+
+.search-bar input {
+  flex: 1; /*all the remaining space will go to it*/
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+
+}
+
+.star-icon {
+  cursor: pointer;
+  font-size: 22px;
+  color: #ccc;
+  transition: transform 0.3s, color 0.3s;
+}
+
+
+.expanded .star-icon {
+  color: #ffae00;
+  transform: rotate(72deg) scale(1.2);
+}
+
+
+.premium-content {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 20px;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.expanded .premium-content {
+  max-height: 400px; 
+  opacity: 1;
+  padding: 20px;
+}
+
+.price-tag {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d4af37;
+  margin: 15px 0;
+}
+
+.upgrade-btn {
+  background: #ffae00;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+     /* Home Section (Swiper) */
+        #home {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .swiper{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+        }
+        .swiper-slide {
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+       
+
+
+        /*caption of slides*/
+        .swiper-slide .slide-caption {
+            position: absolute;
+            bottom: 5rem;
+            left: 5rem;
+            color: #fff;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .swiper-slide .slide-caption h1 {
+            font-size: var(--h1-font);
+            font-weight: var(--font-semi-bold);
+            margin-bottom: 1rem;
+        }
+
+        .swiper-slide .slide-caption p {
+            font-size: 1.8rem;
+            font-weight: var(--font-light);
+        }
+
+        .animation{
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animation.active{
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+
+          /*effect of swiper button */
+        .swiper .swiper-button-next {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        /* show the button when hovering over images*/
+        .swiper:hover .swiper-button-next{
+            opacity: 1;
+        }
+        
+
+        .swiper .swiper-button-prev {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .swiper:hover .swiper-button-prev{
+            opacity: 1;
+        }
+
+
+
+
+
+
+.container {
+  max-width: 800px; /* حدد العرض الذي تريده للمجموعة كاملة هنا */
+  margin: 20px auto;   /* لجعل المجموعة في منتصف الصفحة */
+  padding: 40px 0;
+  /*
+  max-width: 124rem;
+  padding: 0 1rem;
+  margin: 0 auto;*/
+}
+
+.swiper {
+
+ 
+  overflow: hidden;
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+/* styling the slide itself*/
+.tranding-slide {
+
+width: 28rem; 
+height: 35rem;  
+border-radius: 5px;
+ 
+/*
+  width: 37rem;
+  height: 42rem;*/
+  position: relative;
+  background: #e0dbdb;
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+   
+  transition: all 0.3s ease-in-out;
+}
+
+/* non active slides (make them small*/
+.swiper-slide:not(.swiper-slide-active) {
+ filter: blur(1px);  
+  opacity: 0.6;      /* flou effect*/
+   transform: scale(0.5) ; /* make the other slide smaller */
+  
+}
+
+/*img inside the card */
+.tranding-slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+/* content of the card*/
+.tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.food-price {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+  background: #ff4b2b;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+}
+
+.tranding-slide-content-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: #fff;
+}
+
+/* button*/
+.tranding-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-arrow {
+  background: #fff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  left: 40% !important;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+.slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #222222;
+}
+
+.swiper-button-next.slider-arrow {
+  left: 60% !important;
+}
+
+/* (Pagination) */
+.swiper-pagination {
+  position: relative;
+  width: 15rem !important;
+  bottom: 1rem !important;
+}
+
+.swiper-pagination-bullet {
+  height: 0.8rem;
+  width: 0.8rem;
+  background: #222222;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff4b2b;
+  width: 2.5rem;
+  border-radius: 1rem;
+}
+
+
+
