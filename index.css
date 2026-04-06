@@ -149,8 +149,12 @@
             position: relative;
             height: 100vh;
             overflow: hidden;
+            margin-bottom: 200px;
         }
-        .swiper{
+
+
+        /*
+        .swiper  {
             width: 100%;
             height: 100vh;
             position: absolute;
@@ -158,6 +162,17 @@
         .swiper-slide {
             position: relative;
         }
+       */
+
+ .swiper  {
+  
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+ 
+  /*overflow: hidden;*/
+ 
+}
 
         .swiper-slide img {
             width: 100%;
@@ -171,32 +186,36 @@
         /*caption of slides*/
         .swiper-slide .slide-caption {
             position: absolute;
-            bottom: 5rem;
+            bottom: 10rem;
             left: 5rem;
-            color: #fff;
+            color: #c47e7e;
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
         }
 
         .swiper-slide .slide-caption h1 {
             font-size: var(--h1-font);
-            font-weight: var(--font-semi-bold);
+           font-weight: var(--font-semi-bold);
+           
             margin-bottom: 1rem;
         }
 
         .swiper-slide .slide-caption p {
             font-size: 1.8rem;
-            font-weight: var(--font-light);
+            font-weight: 400;
+           
         }
 
-        .animation{
+ .animation{
+          animation: slideIn 1s ease-out forwards;
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition: opacity 0.6s ease-out , transform 0.6s ease-out;
         }
         .animation.active{
             opacity: 1;
             transform: translateY(0);
         }
+
 
 
 
@@ -207,6 +226,51 @@
             transition: opacity 0.3s ease-in-out;
         }
         
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #ffffff;
+            /*padding: 2rem;*/
+            height: 4rem;
+            width: 4rem;
+            background: rgba(223, 218, 218, 0.3);
+            border-radius: 50%;
+            transition: background 0.3s ease;
+            align-items: center;
+        }
+        .swiper-button-prev::after,
+        .swiper-button-prev::before{
+            font-size: 2rem;
+        }
+        .swiper-button-next::after,
+        .swiper-button-next::before{
+            font-size: 2rem;
+        }
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: rgba(111, 111, 111, 0.5);
+        }
+
+        .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 0.7;
+            width: 10px;
+            height: 10px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #c3bdbd;
+            opacity: 1;
+        }
+
+
+
+        /*effect of swiper button */
+        .swiper .swiper-button-next {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+               
         /* show the button when hovering over images*/
         .swiper:hover .swiper-button-next{
             opacity: 1;
@@ -227,49 +291,51 @@
 
 
 
+
 .container {
-  max-width: 800px; /* حدد العرض الذي تريده للمجموعة كاملة هنا */
-  margin: 20px auto;   /* لجعل المجموعة في منتصف الصفحة */
+  max-width: 800px; 
+  margin: 20px auto;   
   padding: 40px 0;
+  
   /*
   max-width: 124rem;
   padding: 0 1rem;
   margin: 0 auto;*/
 }
 
-.swiper {
-
- 
-  overflow: hidden;
+.swiper  {
+  
   height: 52rem;
   padding: 2rem 0;
   position: relative;
+ 
+  /*overflow: hidden;*/
+ 
 }
 
-/* styling the slide itself*/
+/* styling the important slide*/
 .tranding-slide {
 
 width: 28rem; 
-height: 35rem;  
+height: 30rem;  
 border-radius: 5px;
  
-/*
-  width: 37rem;
+
+  /*width: 37rem;
   height: 42rem;*/
   position: relative;
   background: #e0dbdb;
   border-radius: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow:hidden;
    
   transition: all 0.3s ease-in-out;
 }
 
-/* non active slides (make them small*/
+/* non active slides */
 .swiper-slide:not(.swiper-slide-active) {
  filter: blur(1px);  
-  opacity: 0.6;      /* flou effect*/
-   transform: scale(0.5) ; /* make the other slide smaller */
+   
   
 }
 
@@ -290,16 +356,6 @@ border-radius: 5px;
   bottom: 0;
 }
 
-.food-price {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  color: #fff;
-  background: #ff4b2b;
-  padding: 0.5rem 1.5rem;
-  border-radius: 1rem;
-  font-size: 1.8rem;
-}
 
 .tranding-slide-content-bottom {
   position: absolute;

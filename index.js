@@ -15,7 +15,7 @@ function expandSection() {
 
 
 
- // Swiper
+ // Swiper 1
  const swiper = new Swiper('.mySwiper', {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -39,24 +39,23 @@ function expandSection() {
 });
 
 
-
 var TrandingSlider = new Swiper('.tranding-slider', {
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
   loop: true,
-  initialSlide:'auto',
-  slidesPerView: 'auto',
+  
+  slidesPerView: 2,
   
 coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 200, // زيادة العمق تجعل البطاقات الجانبية أصغر وأبعد
-    modifier: 2.5, // قوة التأثير ثلاثي الأبعاد
-    slideShadows: true, // إضافة ظلال داخلية للبطاقات البعيدة
-    spaceBetween:30,
+    depth: 150, // to make the cards looks smaller
+    modifier: 3.5, // 3D effect
+    slideShadows: true, // adding shadow to the small slide
+   
   },
-  
+  spaceBetween:30,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
