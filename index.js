@@ -1,3 +1,19 @@
+function nextSection(tip) {
+    
+    
+   
+    const currentQuestion = tip.closest('.flex');
+    
+    
+    const nextQuestion = currentQuestion.nextElementSibling;
+
+    if (nextQuestion && nextQuestion.classList.contains('flex')) {
+        currentQuestion.classList.remove('active'); 
+        nextQuestion.classList.add('active');      
+    } else {
+        alert("go to result");
+    }
+}
 
 
 

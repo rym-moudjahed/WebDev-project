@@ -1,9 +1,25 @@
 
-.flex{
+.flex {
+  display: none;
+}
+
+.active {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    animation: slideInUp 1.2s cubic-bezier(0.23, 1, 0.32 ,1) both ;
+}
+/*introducing slideInUp*/
+@keyframes slideInUp{
+   0% {
+        opacity: 0;
+        transform: translateY(50px); /*el masafa li ydjoz 3liha w houa tale3*/
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /*bch ki ytla3 ykon stable*/
+    }
 }
 
 .cards {
