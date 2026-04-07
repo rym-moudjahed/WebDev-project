@@ -8,13 +8,13 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    animation: slideInUp 1.2s cubic-bezier(0.23, 1, 0.32 ,1) both ;
+    animation: slideInUp 3s cubic-bezier(0.23, 1, 0.32 ,1) both ;
 }
 /*introducing slideInUp*/
 @keyframes slideInUp{
    0% {
         opacity: 0;
-        transform: translateY(50px); /*el masafa li ydjoz 3liha w houa tale3*/
+        transform: translateY(60px); /*el masafa li ydjoz 3liha w houa tale3*/
     }
     100% {
         opacity: 1;
@@ -306,8 +306,12 @@
 
 
 
-
-
+.showme{
+  display: none;
+}
+.lol{
+  display: block;
+}
 
 
 .container {
@@ -359,10 +363,14 @@ border-radius: 5px;
 
 /*img inside the card */
 .tranding-slide-img img {
+position: relative;
+ z-index: 10000;
+/*z index is for that the onclick works*/
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 2rem;
+  
 }
 
 /* content of the card*/

@@ -1,9 +1,6 @@
 function nextSection(tip) {
-    
-    
-   
+     
     const currentQuestion = tip.closest('.flex');
-    
     
     const nextQuestion = currentQuestion.nextElementSibling;
 
@@ -55,6 +52,8 @@ function expandSection() {
 });
 
 
+//swiper 2
+
 var TrandingSlider = new Swiper('.tranding-slider', {
   effect: 'coverflow',
   grabCursor: true,
@@ -81,3 +80,21 @@ coverflowEffect: {
     prevEl: '.swiper-button-prev',
   }
 });
+
+
+function nnextSection(hello) {
+     
+    const currentQuestion =hello .closest('.showme');
+    
+    const nextQuestion = currentQuestion.nextElementSibling;
+
+    if (nextQuestion && nextQuestion.classList.contains('showme')) {
+        currentQuestion.classList.remove('lol'); 
+        nextQuestion.classList.add('lol');      
+    } else {
+        if(nextQuestion){
+          currentQuestion.classList.remove('lol');
+          nextQuestion.classList.add('active');
+        }
+    }
+}
