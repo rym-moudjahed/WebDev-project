@@ -55,30 +55,6 @@ function nextSection(tip) {
 
 
 
-let aiSearchCount = 0;
-
-function handleAiDiscoveryClick() {
-    aiSearchCount++;
-
-    if (aiSearchCount >= 2) {
-        // Show the premium modal on the 2nd click
-        document.getElementById('premium-modal').style.display = 'flex';
-    } else {
-        // Perform normal AI search logic for the first time
-        console.log("First AI search performed!");
-        alert("AI Discovery activated! Next time you click, you'll see the Premium offer.");
-    }
-}
-
-function closeModal() {
-    document.getElementById('premium-modal').style.display = 'none';
-}
-
-// Attach this to your blue AI button
-document.querySelector('.go-btn').addEventListener('click', handleAiDiscoveryClick);
-
-
-
 
 
 
@@ -103,41 +79,43 @@ window.onload = () => {
 };
 
 
+
+
+
 let aiClickCount = 0;
 
-// This function runs when they click the "Go" or "AI Discovery" button
+function switchMode(element) {
+    // 1. Remove 'activee' from BOTH buttons to reset
+    document.getElementById('ai-mode-btn').classList.remove('activee');
+    document.getElementById('std-mode-btn').classList.remove('activee');
+    
+    // 2. Add 'activee' to the one you actually clicked
+    element.classList.add('activee');
+}
+
 function handleAiDiscovery() {
-    aiClickCount++;
+    // 1. Get the AI button specifically
+    const aiBtn = document.getElementById('ai-mode-btn');
+    
+    // 2. Check if it is the one with the 'activee' class
+    if (aiBtn.classList.contains('activee')) {
+        aiClickCount++;
+        console.log("AI Mode Click Count: " + aiClickCount);
 
-    if (aiClickCount >= 2) {
-        // Show the modal with a nice fade-in
-        const modal = document.getElementById('premium-modal');
-        modal.style.display = 'flex';
-        modal.style.opacity = '1';
+        if (aiClickCount >= 2) {
+            // SHOW PREMIUM MODAL
+            const modal = document.getElementById('premium-modal');
+            if (modal) {
+                modal.style.display = 'flex';
+                modal.style.opacity = '1';
+            }
+        } else {
+            // First click logic (Optional alert or search)
+            alert("AI Discovery search activated!");
+        }
     } else {
-        console.log("Normal AI Search Mode");
+        // THIS IS THE STANDARD MODE
+        // Because the AI button does NOT have 'activee'
+        alert("Standard search: No limits applied.");
     }
 }
-
-// This function runs when they click "Continue Free"
-function dismissPremium() {
-    // 1. Hide the modal
-    const modal = document.getElementById('premium-modal');
-    modal.style.display = 'none';
-
-    // 2. Find the toggle buttons
-    const aiBtn = document.querySelector('.toggle-btn:first-child'); 
-    const stdBtn = document.querySelector('.toggle-btn:last-child'); 
-
-    // 3. Switch the "active" highlight to Standard
-    if (aiBtn && stdBtn) {
-        aiBtn.classList.remove('active');
-        stdBtn.classList.add('active');
-    }
-
-    // 4. Reset the count so they can try again later
-    aiClickCount = 0;
-}
-
-// Attach the listener to your AI button
-document.querySelector('.go-btn').addEventListener('click', handleAiDiscovery);

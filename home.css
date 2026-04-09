@@ -29,18 +29,20 @@ body {
     background-color: #05070a; /* Your dark base color */
     background-image: radial-gradient(
         circle at 50% 30%,      /* Position: 50% from left, 30% from top */
-        rgba(188, 192, 228, 0.15) 0%, /* Soft blue center (Low opacity) */
+        rgba(205, 79, 209, 0.15) 0%, /* Soft blue center (Low opacity) */
         transparent 70%         /* Fades to nothing */
     );
     background-attachment: fixed;
-    height: 100vh;
+
     margin: 0;
+    overflow: auto;
 
     
-    height: 100vh;
-    margin: 0;
-
+    
+  
 }
+
+
 
 
 
@@ -48,7 +50,9 @@ body {
     text-align: center;
     width: 90%;
     max-width: 800px;
+
 }
+
 
 .main-title {
     font-size: 3rem;
@@ -82,6 +86,7 @@ body {
     backdrop-filter: blur(20px) saturate(180%); /* Saturate makes colors behind pop */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle "edge" of the glass */
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8); /* Deep shadow for elevation */
+    margin-bottom: 100px;
 }
 
 
@@ -92,6 +97,9 @@ body {
     flex-grow: 1;
     outline: none;
     font-size: 1rem;
+}
+.mood{
+  margin-top: 100px;
 }
 
 /* Toggle Switch */
@@ -374,4 +382,136 @@ body {
     /* This makes the whole card pulse with blue light */
     border: 1px solid rgba(61, 90, 254, 0.5);
     animation: premiumEntrance 0.6s ease-out, glowPulse 3s infinite ease-in-out;
+}
+
+
+
+/* Container Background */
+.write-article-section {
+  background: transparent;
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* The Main Card */
+.article-card {
+    background: rgba(255, 255, 255, 0.03); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    color: #3d5afe; /* Electric Blue from Figma */
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Inputs and Textarea */
+input[type="text"], 
+textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input::placeholder, 
+textarea::placeholder {
+    color: #666;
+}
+
+input:focus, 
+textarea:focus {
+    border-color: #3d5afe;
+}
+
+textarea {
+    height: 180px;
+    resize: none;
+}
+
+/* Toolbar Buttons */
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.toolbar button {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toolbar button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* The Publish Button */
+.publish-btn {
+    cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: #ffffff;
+  border: 2px solid   #1e14e6;
+  border-radius: 34px;
+  background-color: #1e14e6 ;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+.publish-btn::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color:  rgba(16, 47, 227, 0.6);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+
+}
+.publish-btn:hover {
+    color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+.publish-btn:hover::before {
+  scale: 3;
 }

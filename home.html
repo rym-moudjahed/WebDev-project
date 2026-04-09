@@ -17,10 +17,10 @@
                 <span class="icon">🔍</span>
                 <input type="text" placeholder="Describe your show">
                 <div class="toggle-switch">
-                    <button class="toggle-btn activee">AI Discovery</button>
-                    <button class="toggle-btn">Standard</button>
+                    <button id="ai-mode-btn"  class="toggle-btn activee"   onclick="switchMode(this)">AI Discovery</button>
+                    <button id="std-mode-btn" class="toggle-btn" onclick="switchMode(this)" >Standard</button>
                 </div>
-                <button class="go-btn">➔</button>
+                <button class="go-btn" onclick="handleAiDiscovery()" >➔</button>
             </div>
         </div>
 
@@ -127,7 +127,30 @@
 </div>
 
 
+<section class="write-article-section">
+    <div class="article-card">
+        <h2>Write Your Article</h2>
+        
+        <div class="input-group">
+            <label>ARTICLE TITLE</label>
+            <input type="text" placeholder="Enter a catchy title...">
+        </div>
 
+        <div class="toolbar">
+            <button type="button"><b>B</b></button>
+            <button type="button"><i>I</i></button>
+            <button type="button">🖼️</button>
+            <button type="button">🔗</button>
+        </div>
+
+        <div class="input-group">
+            <label>CONTENT</label>
+            <textarea placeholder="Dive into your theories, reviews, or analysis..."></textarea>
+        </div>
+
+        <button class="publish-btn">Publish Article</button>
+    </div>
+</section>
 
 
 
