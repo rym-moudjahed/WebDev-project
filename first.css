@@ -91,7 +91,7 @@ header{
     line-height: 100%;
     text-transform: uppercase;
     text-align: center;
-    margin-top: -10px;
+    margin-top: -15px;
     line-height: 0.9;
     margin-bottom: 5px;
  }
@@ -116,7 +116,8 @@ header{
  .cta-input input{
     width: 812px ;
     height: 73px;
-    background: #dedede !important;
+    background: #dedede ;
+    opacity: 50%;
     color: rgba(255 ,255, 255, 0,26);
     border-radius: 5px 0 0 5px;
     font-family: 'Luckiest Guy';

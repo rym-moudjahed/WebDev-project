@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgrade to Premium</title>
+    <style>
+        :root {
+            --bg-dark: #0f1116;
+            --card-bg: #1a1d26;
+            --premium-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            --btn-gradient: linear-gradient(to bottom, #d9f99d, #2dd4bf, #3b82f6);
+            --text-gray: #9ca3af;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .modal {
+            width: 400px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+        }
+
+        
+        
+        .content {
+            padding: 20px 30px;
+            text-align: left;
+        }
+
+        .feature-group {
+            margin-bottom: 25px;
+        }
+
+        .feature-title {
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: var(--text-gray);
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .card {
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 0.85rem;
+        }
+
+        .card.free {
+            background: transparent;
+            border: 1px solid #374151;
+        }
+
+        .card.premium {
+            background: var(--premium-gradient);
+            position: relative;
+        }
+
+        .card-label {
+            font-size: 0.65rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        /* Buttons */
+        .actions {
+            padding: 0 30px 30px;
+        }
+
+        .btn-premium {
+            width: 100%;
+            padding: 14px;
+            border-radius: 30px;
+            border: none;
+            background: var(--btn-gradient);
+            color: #064e3b;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .btn-free {
+            background: transparent;
+            border: none;
+            color: var(--text-gray);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .footer-text {
+            font-size: 0.65rem;
+            color: #4b5563;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="modal">
+        <div class="header">
+
+            <img src="Hero Section of Modal.png" alt="">
+
+        </div>
+
+        <div class="content">
+            <div class="feature-group">
+                <div class="feature-title">🌐 AI SEARCH</div>
+                <div class="grid">
+                    <div class="card free">
+                        <span class="card-label">FREE</span>
+                        Use AI search 3 times/day for free
+                    </div>
+                    <div class="card premium">
+                        <span class="card-label">PREMIUM</span>
+                        Advanced & unlimited search in Premium
+                        </div>
+                </div>
+            </div>
+
+            <div class="feature-group">
+                <div class="feature-title">✍️ WRITING & XP</div>
+                <div class="grid">
+                    <div class="card free">
+                        <span class="card-label">FREE</span>
+                        Write articles and earn XP
+                    </div>
+                    <div class="card premium">
+                        <span class="card-label">PREMIUM</span>
+                        XP Boosts & exclusive titles in Premium
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn-premium">Go Premium</button>
+            <br>
+            <button class="btn-free">Continue Free</button>
+            <div class="footer-text">
+                Cancel anytime. Taxes may apply based on your location.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

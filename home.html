@@ -17,7 +17,7 @@
                 <span class="icon">🔍</span>
                 <input type="text" placeholder="Describe your show">
                 <div class="toggle-switch">
-                    <button class="toggle-btn active">AI Discovery</button>
+                    <button class="toggle-btn activee">AI Discovery</button>
                     <button class="toggle-btn">Standard</button>
                 </div>
                 <button class="go-btn">➔</button>
@@ -25,33 +25,111 @@
         </div>
 
         
-
+<section class="mood">
         
     <h1 class="main-title">MOOD <span class="accent-text">FINDER</span></h1>
-    <p class="subtitle">Where are you?</p>
+    
 
-    <div class="options-container">
-        <div class="option-card" onclick="selectOption(this)">
-            <p>Lorem ipsum</p>
-        </div>
-        <div class="option-card" onclick="selectOption(this)">
-            <p>Lorem ipsum dolor sit</p>
-        </div>
-        <div class="option-card" onclick="selectOption(this)">
-            <p>Lorem ipsum dolor sit, iciendis.</p>
-        </div>
+ 
+    <div class="flex active">
+    <p class="question"> Stop scrolling past posters and start watching what you actually feel. Whether you’re looking to feed your soul or just shut off your brain, we match your current vibe to the perfect film in three clicks.</p>
+
+    <button class="tip buttonn" onclick="nextSection(this)">lets start</button>
+
+</div>
+    
+     <div class="flex ">
+    <p> How much emotional energy do you have left today?</p>
+<div class="cards">
+    <div class="card ">
+    <p class="tip" onclick="nextSection(this)">Low: I just want to turn my brain off and laugh. </p>
     </div>
-
-    <p class="tiny-label">try this</p>
-    <div class="search-container">
-        <div class="search-bar mini">
-            <input type="text" placeholder="search">
-            <span class="star-icon">★</span>
-        </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Medium: Give me a solid story that keeps me hooked.</p>
+        
     </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">High: I’m ready for a deep, complex masterpiece.</p>
+       
+    </div>
+</div>
+</div> 
 
 
-    </section>
+
+
+<div class="flex">
+    <p>What’s the "vibe" in the room right now?</p>
+<div class="cards">
+    <div class="card ">
+    <p class="tip" onclick="nextSection(this)">Cozy & Warm: Blankets, tea, and wholesome energy.</p>
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Electric & Tense: Low lights, high stakes, and edge-of-my-seat.</p>
+        
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Melancholy & Blue: Rainy windows and deep reflections.</p>
+       
+    </div>
+</div>
+</div> 
+
+
+
+
+
+<div class="flex">
+    <p>If your life were a soundtrack right now, what would it be?</p>
+<div class="cards">
+    <div class="card ">
+    <p class="tip" onclick="nextSection(this)">Synth-pop: Fast-paced, neon, and exciting. </p>
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Classic Piano: Thoughtful, elegant, and timeless.</p>
+        
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Silence: I need something atmospheric and quiet.</p>
+       
+    </div>
+</div>
+</div> 
+ 
+</section>
+
+
+
+<div id="premium-modal" class="modal-overlay">
+    <div class="modal-content">
+        <img src="Hero Section of Modal.png" alt="">
+        <div class="benefit-grid">
+            <div class="benefit-card free">
+                <p class="label">🌐 AI SEARCH</p>
+                <div class="card-inner">
+                    <strong>FREE</strong>
+                    <p>Use AI search 1 time/day for free</p>
+                </div>
+            </div>
+            <div class="benefit-card premium">
+                <p class="label">&nbsp;</p> <div class="card-inner">
+                    <strong>PREMIUM</strong>
+                    <p>Advanced & unlimited search in Premium</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-go-premium">Go Premium</button>
+        <button class="btn-continue-free" onclick="closeModal()">Continue Free</button>
+        
+        <p class="footer-note">Cancel anytime. Taxes may apply based on your location.</p>
+    </div>
+</div>
+
+
+
+
+
 
 
 
