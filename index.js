@@ -15,6 +15,32 @@ function nextSection(tip) {
 
 
 
+document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons in the toggle group
+        button.parentElement.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.classList.remove('activee');
+        });
+        
+        // Add active class to the clicked button
+        button.classList.add('activee');
+        
+        console.log("Mode switched to:", button.innerText);
+    });
+});
+
+const goBtn = document.querySelector('.go-btn');
+const searchInput = document.querySelector('input');
+
+goBtn.addEventListener('click', () => {
+    if(searchInput.value) {
+        alert("Searching for vibes related to: " + searchInput.value);
+    }
+});
+
+
+
+
 
 
 
@@ -26,6 +52,19 @@ function expandSection() {
 
 
 
+function changeSection() {
+    const s1 = document.getElementById('search-1');
+    const s2 = document.getElementById('search-2');
+
+    // تبديل الكلاسات بين الحاويتين
+    if (s1.classList.contains('change')) {
+        s1.classList.remove('change');
+        s2.classList.add('change');
+    } else {
+        s2.classList.remove('change');
+        s1.classList.add('change');
+    }
+}
 
 
  // Swiper 1

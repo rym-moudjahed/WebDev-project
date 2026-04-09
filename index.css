@@ -1,4 +1,8 @@
 
+.question{
+  text-align: center;
+}
+
 .flex {
   display: none;
 }
@@ -64,7 +68,7 @@
 
 
 
-
+/*section ta3 search bar*/
 
 .premium-wrapper {
   
@@ -84,7 +88,7 @@
 .Title{
     margin: 20px auto;
 }
-.search-bar {
+.search-barr {
   display: flex;
   background-color: #f0f0f0;
   border: 2px solid transparent;
@@ -99,7 +103,7 @@
 
 }
 
-.search-bar input {
+.search-barr input {
   flex: 1; /*all the remaining space will go to it*/
   border: none;
   outline: none;
@@ -157,7 +161,7 @@
 
 
 
-
+/*from the website of the last year , swiper1*/
 
 
      /* Home Section (Swiper) */
@@ -306,6 +310,7 @@
 
 
 
+/*second swiper*/
 .showme{
   display: none;
 }
@@ -437,5 +442,168 @@ position: relative;
   border-radius: 1rem;
 }
 
+.smallsection{
+
+  display: flex;
+  gap: 50px;
+}
+
+.try {
+  
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.try {
+  --primary-color: #111;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.try p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.try::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.try.ss p::before {
+  position: absolute;
+  content: "skip";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+.try.bb p::before{
+  position: absolute;
+  content: "before";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.try:hover::after {
+  width: 100%;
+}
+
+.try:hover p::before {
+  width: 100%;
+}
+
+.try.ss:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+.try.bb:hover svg{
+  transform: translateX(-4px);
+  color: var(--hovered-color);
+}
+
+.try svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
 
 
+/*rania search bar*/
+.search-container.change{
+    background: rgb(132, 132, 178);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    width: 100vh;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    flex-grow: 1;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    background: #111;
+    border-radius: 30px;
+    padding: 4px;
+    display: flex;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    padding: 6px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.toggle-btn.activee {
+    background: rgb(94, 94, 233);
+    color: white;
+}
+
+.go-btn {
+    background: green;
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgb(130, 122, 122);
+}
+
+
+
+.search-container{
+  display: none;
+}
+
+.search-container.change .ai{
+    background: rgb(83, 141, 87);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    width: 100vh;
+}
