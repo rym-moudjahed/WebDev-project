@@ -141,19 +141,62 @@ body {
 
 
 
+.mood{
+background-color: #666;
+padding: 50px;
+/*bla had zoudj effect mybnch:*/
+position: relative;
+z-index: 1;
+/*3la el media*/
+overflow: hidden;
+
+}
 
 
+/*hado before after kcghol ymodifyiw 3la el html w yzidolo
+3anasir machi mktobin wela m designin fl html
+yA3ni t9dri diri element m css fhadik ta3 content)*/
+.mood::before,
+.mood::after {
+  content: ""; /*content li 7nzidoh rah effect machi ktiba so mtktbi walo*/
+  position: absolute; 
+  /*el size ta3 el effect*/
+  width: 800px;
+  height: 400px;
+  border-radius: 50%;
+  /*hna win diri tasmim ll effect*/ 
+  background: radial-gradient(circle, rgba(121, 55, 192, 0.4) 0%, rgba(44, 149, 175, 0) 70%);
+  filter: blur(80px);   /*hadi kima 9ltlk bch el effect ybn flou meme el 
+                          opacitybsa7 ta tir mokhtalif chwiya*/
+  z-index: -1; 
+
+}
+
+/*hna t positioner el effect*/
+.mood::before {
+  top: -10%;
+  right: 5%;
+}
+
+/*hna bch tzidi za3ma effect wa7dakhor b position wa7dokhra*/
+.mood::after {
+  bottom: 10%;
+  left: -10%;
+  width: 500px; 
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.2) 0%, rgba(0, 255, 127, 0) 70%); 
+}
 
 .flex {
   display: none;
-  gap: 15px;
   max-width: 400px;
+  gap: 15px;
   margin: 0 auto;
   font-family: 'Inter', sans-serif
 
+
 }
 .question{
-    color: #888;
+    color: #373434;
     font-size: 0.9rem;
     margin-bottom: 40px;
 }
