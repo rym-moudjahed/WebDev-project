@@ -109,9 +109,11 @@ button{
     position: relative;
     left: 10px;
 }
+/*
 body {
     background-color: #000000;
 }
+    */
 .sidebar {
     position: fixed;
     top: 0;
