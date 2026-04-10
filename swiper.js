@@ -3,11 +3,11 @@ const menubutton = document.getElementById('menubutton');
 const btn = document.getElementById('btn');
 const sidebar = document.getElementById('sidebar');
 menubutton.onclick = function() {
-    sidebar.classList.add('active');
+    sidebar.classList.add('activex');
         
 };
 btn.onclick = function() {
-    sidebar.classList.remove('active');
+    sidebar.classList.remove('activex');
     
 };
 const swiper = new Swiper('.mySwiper', {

@@ -20,7 +20,8 @@ body::before {
 
 
 body {
-    
+    display: flex;
+    flex-direction: column;
     color: var(--text-white);
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -69,7 +70,7 @@ body {
     width: 800px;
     text-align: center;
     margin: auto;
-
+    padding: 100px;
 }
 
 /* Search Bar Styling */
@@ -168,6 +169,29 @@ padding: 50px;
 
     .discovery-section {
         padding: 20px 10px;
+    }
+}
+@media (max-width: 100px) {
+    .main-title {
+        font-size: 1.8rem;
+        padding: 0 10px;
+    }
+
+    .search-bar {
+        padding: 8px 15px; /* Tighter padding for small screens */
+        gap: 10px;
+
+    }
+
+    .search-bar input {
+        font-size: 0.9rem;
+    }
+
+    .discovery-section {
+        padding: 20px 10px;
+    }
+    .search {
+        padding: 300px;
     }
 }
 

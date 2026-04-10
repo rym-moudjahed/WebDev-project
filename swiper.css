@@ -59,7 +59,7 @@ nav {
    font-size: 18px;
    transition: 0.3s;   
 }
-a {
+.links a {
     color: #55E7FF;
     text-decoration: none;   
     font-family: 'Montserrat', sans-serif;
@@ -67,7 +67,7 @@ a {
     font-size: 18px;
     transition: 0.3s;   
 }
-a:hover {
+.links a:hover {
   color: white;          
   text-shadow: 0 0 10px white; 
   cursor: pointer;
@@ -107,7 +107,7 @@ button{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
-    left: 10px;
+    left: 0px;
 }
 body {
     background-color: #000000;
@@ -125,7 +125,7 @@ body {
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
 }
-.sidebar.active {
+.sidebar.activex {
     left: 0;
 }
 #btn {
@@ -142,7 +142,7 @@ body {
     border: 1px solid blue;
     border-radius: 50%;
     position: relative;
-    left: -4%;
+    left: -36%;
     filter: brightness(0) invert(1); 
     margin-right: 5px;
 }
@@ -162,7 +162,7 @@ body {
     vertical-align: middle;
     margin-right: 5px;
 }
-.search {
+.searchsss {
     width: 25px;
     height: fit-content;
     filter: brightness(0) invert(1); 
@@ -180,7 +180,7 @@ body {
     position: relative;
     top: 17%;
 }
-.premium {
+.premiumsss {
     width: 25px;
     height: fit-content;
     filter: brightness(0) invert(1); 
