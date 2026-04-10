@@ -1,0 +1,184 @@
+*::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a2e;
+  font-family: 'Barlow', sans-serif;
+}
+
+/* ── Card ── */
+.card {
+  width: 320px;
+  min-height: 580px;
+  background: #3a3a4a;
+  border-radius: 28px;
+  padding: 32px 28px 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.07),
+    0 32px 80px rgba(0, 0, 0, 0.6),
+    0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.06) 0%, transparent 65%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* ── Header ── */
+.card-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.card-header h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.card-header p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+}
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.track {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 0;
+}
+
+.track-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(4 * 52px + 26px);
+  background: linear-gradient(to top, #2c5ff5, #4a7dff);
+  border-radius: 2px;
+}
+
+/* ── Level Row ── */
+.level-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr;
+  align-items: center;
+  height: 52px;
+  z-index: 1;
+}
+
+/* ── Level Label (left) ── */
+.level-label {
+  text-align: right;
+  padding-right: 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.3);
+  transition: color 0.2s;
+}
+
+.level-row.active .level-label,
+.level-row.completed .level-label {
+  color: #4a7dff;
+}
+
+/* ── Dot (center) ── */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  justify-self: center;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.level-row.completed .dot {
+  background: #4a7dff;
+  width: 10px;
+  height: 10px;
+}
+
+.level-row.active .dot {
+  background: #4a7dff;
+  width: 18px;
+  height: 18px;
+  box-shadow:
+    0 0 0 4px rgba(74, 125, 255, 0.25),
+    0 0 16px rgba(74, 125, 255, 0.5);
+}
+
+/* ── Level Title (right) ── */
+.level-title {
+  padding-left: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.level-row.active .level-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.level-row.completed .level-title {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ── XP Badge ── */
+.xp-badge {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4a7dff;
+  margin-top: 2px;
+  letter-spacing: 0.04em;
+}
+
+/* ── Footer ── */
+.footer-note {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+}
+
+.footer-note .premium {
+  color: #FF8C00;
+  letter-spacing: 0.1em;
+}
