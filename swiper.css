@@ -337,6 +337,32 @@ body {
     left: 35%;
     top: 5%;
 }
+.perso {
+    width: 25px;
+    height: fit-content;
+    filter: brightness(0) invert(1); 
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    top: 17%;
+}
+.persos {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+    left: 5%;
+    transition: 0.3s ease;
+}
+.persos:hover {
+    background-color: #1C1C1C;  
+    color: #0055FF;             
+    border-left: 4px solid #0055FF;
+    width: 90%;
+}
+.persos:hover img {
+    filter: invert(27%) sepia(91%) saturate(6151%) hue-rotate(222deg) brightness(103%) contrast(105%);
+}
 .n1{
     border: transparent;
     background-color: #003BFF;
@@ -365,6 +391,9 @@ body {
     margin-left: 10px;
 }
 .n8 {
+    margin-left: 10px;
+}
+.n9 {
     margin-left: 10px;
 }
 @media (max-width: 768px) {
