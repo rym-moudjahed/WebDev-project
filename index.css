@@ -1,3 +1,4 @@
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -82,7 +83,7 @@ a:hover {
 button{
     border: 1px solid black;
     background: linear-gradient(135deg, #55E7FF 0%, #BFFBFF 100%);
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     padding: 5px;
     margin-left: 5px;
@@ -365,4 +366,19 @@ body {
 }
 .n8 {
     margin-left: 10px;
+}
+@media (max-width: 768px) {
+    .logo {
+        font-size: 23px; 
+    }
+    .links {
+        display: none; 
+    }
+    #menubutton {
+        display: block; 
+    }
+    .sidebar {
+        width: 60%; 
+        left: -200%; 
+    }
 }
