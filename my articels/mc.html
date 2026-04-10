@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midnight Editor — My Articles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="mc.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-brand">fynx</span>
+    <div class="nav-links">
+      
+      <a href="#" class="active">My Articles</a>
+     
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input type="text" placeholder="Search archive…" />
+      </div>
+      <div class="nav-bell">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+      </div>
+      <div class="nav-avatar">
+        <span class="title-badge">TITLE</span>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- MAIN -->
+  <main>
+    <h1 class="page-title">My Articles</h1>
+    <div class="page-title-underline"></div> 
+
+
+    <!-- PUBLISHED -->
+    <div class="section-header">
+      <span class="section-label">Published</span>
+      <span class="section-count">02 Articles</span>
+    </div>
+
+    <div class="article-list">
+      <div class="article-row">
+        <div class="article-body">
+          <div class="article-title">Quantum Fragments</div>
+          <div class="article-excerpt">Exploration into the sub-atomic narrative structures that define modern digital storytelling and the physics of user retention.</div>
+        </div>
+        <div class="article-actions">
+          <button class="btn-action btn-view">VIEW</button>
+          <button class="btn-action btn-edit">EDIT</button>
+        </div>
+      </div>
+
+      <div class="article-row">
+        <div class="article-body">
+          <div class="article-title">Silicon Whispers</div>
+          <div class="article-excerpt">A deep dive into the hidden algorithms of the aesthetic economy and how they shape our perception of original work.</div>
+        </div>
+        <div class="article-actions">
+          <button class="btn-action btn-view">VIEW</button>
+          <button class="btn-action btn-edit">EDIT</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRAFTS -->
+    <div class="section-header">
+      <span class="section-label">Drafts</span>
+      <span class="section-count">02 Items</span>
+    </div>
+
+    <div class="article-list">
+      <div class="draft-row">
+        <div class="draft-left">
+          <div class="draft-title">Aesthetic Calculus</div>
+          <div class="draft-meta">
+            <span class="draft-tag">DRAFT</span>
+            <span class="draft-time">Last edited 2 days ago</span>
+          </div>
+        </div>
+        <div class="draft-actions">
+          <button class="btn-action btn-edit">EDIT</button>
+        </div>
+      </div>
+
+      <div class="draft-row">
+        <div class="draft-left">
+          <div class="draft-title">Urban Echoes</div>
+          <div class="draft-meta">
+            <span class="draft-tag">DRAFT</span>
+            <span class="draft-time">Started 4 hours ago</span>
+          </div>
+        </div>
+        <div class="draft-actions">
+          <button class="btn-action btn-edit">EDIT</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="write-btn-wrapper">
+      <button class="btn-write">
+        WRITE NEW ARTICLE
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </main>
+
+</body>
+</html>
