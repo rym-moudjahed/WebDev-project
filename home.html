@@ -9,6 +9,7 @@
 <body>
 
     <section class="discovery-section">
+       <div class="search">
         <h1 class="main-title">FIND YOUR <span class="accent-text">NEXT VIBE</span></h1>
         <p class="subtitle">Hyper-personalized discovery powered by FYNX AI</p>
 
@@ -20,18 +21,20 @@
                     <button id="ai-mode-btn"  class="toggle-btn activee"   onclick="switchMode(this)">AI Discovery</button>
                     <button id="std-mode-btn" class="toggle-btn" onclick="switchMode(this)" >Standard</button>
                 </div>
+                
                 <button class="go-btn" onclick="handleAiDiscovery()" >➔</button>
             </div>
         </div>
-
-        
+    </div>  
+    
 <section class="mood">
         
-    <h1 class="main-title">MOOD <span class="accent-text">FINDER</span></h1>
+    
     
 
  
     <div class="flex active">
+        <h1 class="main-title">MOOD <span class="accent-text">FINDER</span></h1>
     <p class="question"> Stop scrolling past posters and start watching what you actually feel. Whether you’re looking to feed your soul or just shut off your brain, we match your current vibe to the perfect film in three clicks.</p>
 
     <button class="tip buttonn" onclick="nextSection(this)">lets start</button>
@@ -98,7 +101,7 @@
  
 </section>
 
-
+ </section> 
 
 <div id="premium-modal" class="modal-overlay">
     <div class="modal-content">
@@ -126,41 +129,8 @@
     </div>
 </div>
 
+<script src="home.js"></script>
 
-<section class="write-article-section">
-    <div class="article-card">
-        <h2>Write Your Article</h2>
-        
-        <div class="input-group">
-            <label>ARTICLE TITLE</label>
-            <input type="text" placeholder="Enter a catchy title...">
-        </div>
-
-        <div class="toolbar">
-            <button type="button"><b>B</b></button>
-            <button type="button"><i>I</i></button>
-            <button type="button">🖼️</button>
-            <button type="button">🔗</button>
-        </div>
-
-        <div class="input-group">
-            <label>CONTENT</label>
-            <textarea placeholder="Dive into your theories, reviews, or analysis..."></textarea>
-        </div>
-
-        <button class="publish-btn">Publish Article</button>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-    <script src="home.js"></script>
     
 </body>
-</html>
+        
