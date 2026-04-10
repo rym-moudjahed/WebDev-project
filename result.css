@@ -552,7 +552,85 @@ textarea {
 
 
 
+/* Tablet and Small Laptops */
+@media (max-width: 1024px) {
+    .hero-section {
+        padding: 0 5%;
+        height: auto;
+        min-height: 70vh;
+        flex-direction: column; /* Stack text and preview vertically */
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .title {
+        font-size: 4rem; /* Slightly smaller title */
+    }
+
+    .trailer-preview {
+        width: 80%; /* Make trailer box wider on smaller screens */
+        max-width: 450px;
+        align-self: center; /* Center the trailer box */
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    .hero-section {
+        background-position: 70% center; /* Shift image to show the character better on narrow screens */
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .title {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+
+    .meta {
+        justify-content: center;
+        font-size: 10px;
+    }
+
+    .tagline {
+        border-left: none;
+        border-top: 2px solid #3d5afe;
+        padding-left: 0;
+        padding-top: 10px;
+        font-size: 0.8rem;
+    }
+
+    .trailer-preview {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
 
 
 
+/* Only triggers on PHONES */
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-left: 0;
+    }
+
+    .title {
+        font-size: 3rem; /* Shrink title for phone */
+    }
+
+    .trailer-preview {
+        position: static; /* Let it sit under the text */
+        margin: 20px auto;
+        width: 90%;
+    }
+}
 
