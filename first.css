@@ -6,7 +6,7 @@
 }
 body{
     font-family: 'Arial Black' , Georgia , sans-serif;
-    background-color: var(--bg-dark);
+    background-color: #000;
     color: var(--text-white);
 }
 .logo-group{
@@ -14,7 +14,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('bottom.png');
+    background-image: url('pics/bottom.png');
     -webkit-mask-image : linear-gradient(to bottom, black 70%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     
@@ -51,16 +51,16 @@ header{
 
 }
 .hero-section{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    min-height: 600px;
+    min-height: 700px;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('pics/img.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    overflow: visible;
+    overflow: hidden;
     padding-bottom: 150px;
     position: relative;
     z-index: 1;
@@ -165,40 +165,8 @@ header{
  .btn-get-started :hover::before{
 scale: 3;
  }
-.feature-section{
-    position: relative;
-    overflow: visible;
-    margin-top: -180px;
-    z-index: 10;
-}
-.curve-border{
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: -2px;
-    position: relative;
-    top: 0;
-    z-index: 10;
-    margin-bottom: -1px;
-}
-.section-title{
-    position: relative;
-    z-index: 20;
-    margin-top: -1500px;
-    color: #ffffff;
-    text-align: center;
-    font-family: 'Luckiest Guy';
-    font-size: larger;
-}
-.reasons-container{
-    position: relative;
-    margin-top: -1400px;
-    z-index: 30;
-    display: flex;
-    justify-content: center;
-}
-.main-footer{
-    background-image: url('bottom.png');
+ .main-footer{
+    background-image: url('pics/bottom.png');
     -webkit-mask-image : linear-gradient(to top, black 70%, transparent 100%);
     mask-image: linear-gradient(to top, black 70%, transparent 100%);
     
@@ -218,4 +186,158 @@ scale: 3;
     display: flex;
     justify-content: space-between;
     color: white;
+}
+#poet {
+    filter: brightness(0) invert(1); 
+}
+#ai {
+    filter: brightness(0) invert(1); 
+}
+#userhehe{
+    filter: brightness(0) invert(1); 
+}
+
+
+/* General Section Setup */
+.feature-section {
+    
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: -50px;
+    z-index: 10;
+    position: relative;
+    
+}
+
+/* The Curved Top Border */
+.curve-border {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Container for Title and Grid */
+.reasons-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20; /* Ensures content is above the curve image */
+
+}
+
+.reasons-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* The Grid Layout */
+.reasons-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows wrapping on mobile */
+}
+
+/* The Individual Cards */
+.reason-card {
+    background: linear-gradient(145deg, #0a0a2e, #000); /* Dark blue to black gradient */
+    border: 1px solid #1a1a4a; /* Subtle border */
+    border-radius: 20px;
+    padding: 40px 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Icon Styling */
+.icon-wrapper img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+/* Text inside Cards */
+.reason-card h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.reason-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+/* --- Tablets and Small Laptops (Max width 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .reasons-container, 
+    .footer-columns {
+        max-width: 90%; /* Give some breathing room on the sides */
+    }
+}
+
+/* --- Mobile Phones (Max width 768px) --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Header & Logo Adjustments */
+    header {
+        flex-direction: column; /* Stack logo and nav/button */
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 40px; /* Smaller logo for mobile */
+    }
+
+    /* 2. Typography Adjustments */
+    .title-top, 
+    .title-bottom {
+        font-size: 45px; /* Shrink the 82px font so it fits */
+        line-height: 1.1;
+    }
+
+    .account-prompt {
+        font-size: 24px;
+    }
+
+    /* 3. Hero Section & Inputs */
+    .hero-section {
+        padding-bottom: 80px;
+    }
+
+    .cta-input {
+        flex-direction: column; /* Stack the input and button */
+        align-items: center;
+        width: 100%;
+    }
+
+    .cta-input input {
+        width: 90%; /* Full width instead of 812px */
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .btn-get-started {
+        width: 90%; /* Full width instead of 312px */
+        height: 60px;
+    }
+
+    /* 4. Footer Adjustments */
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
 }
