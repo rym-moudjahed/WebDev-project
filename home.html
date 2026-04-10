@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYNX</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <section class="discovery-section">
+       <div class="search">
+        <h1 class="main-title">FIND YOUR <span class="accent-text">NEXT VIBE</span></h1>
+        <p class="subtitle">Hyper-personalized discovery powered by FYNX AI</p>
+
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="icon">🔍</span>
+                <input type="text" placeholder="Describe your show">
+                <div class="toggle-switch">
+                    <button id="ai-mode-btn"  class="toggle-btn activee"   onclick="switchMode(this)">AI Discovery</button>
+                    <a href="result.html"><button id="std-mode-btn" class="toggle-btn" onclick="switchMode(this)" >Standard</button></a>
+                </div>
+                
+                <button class="go-btn" onclick="handleAiDiscovery()" >➔</button>
+            </div>
+        </div>
+    </div>  
+    
+<section class="mood">
+        
+    
+    
+
+ 
+    <div class="flex active">
+        <h1 class="main-title">MOOD <span class="accent-text">FINDER</span></h1>
+    <p class="question"> Stop scrolling past posters and start watching what you actually feel. Whether you’re looking to feed your soul or just shut off your brain, we match your current vibe to the perfect film in three clicks.</p>
+
+    <button class="tip buttonn" onclick="nextSection(this)">lets start</button>
+
+</div>
+    
+     <div class="flex ">
+    <p> How much emotional energy do you have left today?</p>
+<div class="cards">
+    <div class="card ">
+    <p class="tip" onclick="nextSection(this)">Low: I just want to turn my brain off and laugh. </p>
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Medium: Give me a solid story that keeps me hooked.</p>
+        
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">High: I’m ready for a deep, complex masterpiece.</p>
+       
+    </div>
+</div>
+</div> 
+
+
+
+
+<div class="flex">
+    <p>What’s the "vibe" in the room right now?</p>
+<div class="cards">
+    <div class="card ">
+    <p class="tip" onclick="nextSection(this)">Cozy & Warm: Blankets, tea, and wholesome energy.</p>
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Electric & Tense: Low lights, high stakes, and edge-of-my-seat.</p>
+        
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Melancholy & Blue: Rainy windows and deep reflections.</p>
+       
+    </div>
+</div>
+</div> 
+
+
+
+
+
+<div class="flex">
+    <p>If your life were a soundtrack right now, what would it be?</p>
+<div class="cards">
+    <div class="card ">
+    <p class="tip" onclick="nextSection(this)">Synth-pop: Fast-paced, neon, and exciting. </p>
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Classic Piano: Thoughtful, elegant, and timeless.</p>
+        
+    </div>
+    <div class="card">
+    <p class="tip" onclick="nextSection(this)">Silence: I need something atmospheric and quiet.</p>
+       
+    </div>
+</div>
+</div> 
+ 
+</section>
+<footer class="main-footer">
+        <div class="footer-columns">
+            <div class="col">
+                <h5>QUICK LINKS :</h5>
+                <ul>
+                    <li>HOME</li>
+                    <li>BROWSE MOVIES</li>
+                    <li>ARTICLES</li>
+                    <li>PREMIUM</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h5> SUPPORT :</h5>
+                 <ul>
+                    <li>FAQ / QUESTIONS</li>
+                    <li>CONTACT US</li>
+                    <li>REPORT A BUG</li>
+                 </ul>
+            </div>
+            <div class="col">
+                <h5>LEGAL :</h5>
+                <ul>
+                    <li>TERMS OF SERVICE</li>
+                    <li>PRIVACY POLICY</li>
+                    <li>COOKIE POLICY</li>
+                </ul>
+            </div>
+        </div>
+        <div class="socila-foote">
+            <h5>SOCIAL MEDIA :</h5>
+            <p>FACEBOOK / TWITTER /INSTAGRAM / YOUTUBE</p>
+        </div>
+    </footer>
+
+
+
+ </section> 
+
+<div id="premium-modal" class="modal-overlay">
+    <div class="modal-content">
+        <img src="Hero Section of Modal.png" alt="">
+        <div class="benefit-grid">
+            <div class="benefit-card free">
+                <p class="label">🌐 AI SEARCH</p>
+                <div class="card-inner">
+                    <strong>FREE</strong>
+                    <p>Use AI search 1 time/day for free</p>
+                </div>
+            </div>
+            <div class="benefit-card premium">
+                <p class="label">&nbsp;</p> <div class="card-inner">
+                    <strong>PREMIUM</strong>
+                    <p>Advanced & unlimited search in Premium</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-go-premium">Go Premium</button>
+        <button class="btn-continue-free" onclick="closeModal()">Continue Free</button>
+        
+        <p class="footer-note">Cancel anytime. Taxes may apply based on your location.</p>
+    </div>
+
+</div>
+
+
+
+
+
+<script src="home.js"></script>
+
+    
+</body>
+        
