@@ -1,0 +1,413 @@
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent;
+  border-radius: 20px;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background: linear-gradient(180deg, #00004D 40%, #000000 100%);
+}
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: x-large;
+    position: relative;
+    left: 25px;
+    top: -5px;
+    background: linear-gradient(180deg, #55E7FF, #BFFBFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.6));
+}
+#menubutton {
+   width: 30px;
+   height: 30px;
+   position: relative;
+   top: 20px;
+   left: 10px;
+   cursor: pointer;
+}
+.links {
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+   position: relative;
+   left: 40%;
+   top: 10px;
+   text-decoration: none;   
+   color: white;             
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 600;
+   font-size: 18px;
+   transition: 0.3s;   
+}
+a {
+    color: #55E7FF;
+    text-decoration: none;   
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;   
+}
+a:hover {
+  color: white;          
+  text-shadow: 0 0 10px white; 
+  cursor: pointer;
+}
+.btns {
+    position: relative;
+    left: 50%;
+    top: 20px;
+    display: flex;
+    gap: 20px;
+    height: fit-content;
+}
+button{
+    border: 1px solid black;
+    background: linear-gradient(135deg, #55E7FF 0%, #BFFBFF 100%);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 5px;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;   
+}
+.btns button:hover {
+    transform: scale(1.1,1.1);
+}
+.btns:hover > button:not(:hover){
+    transform: scale(0.9,0.9);
+}
+.trend {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: x-large;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    left: 10px;
+}
+body {
+    background-color: #000000;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -9000px; 
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(180deg, #1C1C1C 0%, #000826 100%); 
+    z-index: 99;
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+.sidebar.active {
+    left: 0;
+}
+#btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    left: 85%;
+    top: 2%;
+}
+.profile {
+    width: 100px;
+    height: fit-content;
+    border: 1px solid blue;
+    border-radius: 50%;
+    position: relative;
+    left: -4%;
+    filter: brightness(0) invert(1); 
+    margin-right: 5px;
+}
+.home {
+    width: 25px;
+    height: fit-content;
+    filter: brightness(0) invert(1); 
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    top: 17%;
+}
+.lvl {
+    width: 25px;
+    height: fit-content;
+    filter: brightness(0) invert(1); 
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.search {
+    width: 25px;
+    height: fit-content;
+    filter: brightness(0) invert(1); 
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    top: 17%;
+}
+.setting {
+    width: 25px;
+    height: fit-content;
+    filter: brightness(0) invert(1); 
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    top: 17%;
+}
+.premium {
+    width: 25px;
+    height: fit-content;
+    filter: brightness(0) invert(1); 
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    top: 17%;
+}
+.article {
+    width: 25px;
+    height: fit-content;
+    filter: brightness(0) invert(1); 
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    top: 17%;
+}
+.support {
+    width: 25px;
+    height: fit-content;
+    filter: brightness(0) invert(1); 
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    top: 17%;
+}
+.homes {
+   display: flex;
+   flex-direction: row;
+   color: white;
+   position: relative;
+   left: 5%;
+   transition: 0.3s ease;
+}
+.searchs {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+    left: 5%;
+    transition: 0.3s ease;
+}
+.settings {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+    left: 5%;
+    transition: 0.3s ease;
+}
+.premiums {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+    left: 5%;
+    transition: 0.3s ease;
+}
+.articles {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+    left: 5%;
+    transition: 0.3s ease;
+}
+.questions {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+    left: 5%;
+    transition: 0.3s ease;
+}
+.searches {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+    left: 5%;
+    transition: 0.3s ease;
+}
+.searches:hover {
+    background-color: #1C1C1C;  
+    color: #0055FF;             
+    border-left: 4px solid #0055FF;
+    width: 90%;
+}
+.searches:hover img {
+    filter: invert(27%) sepia(91%) saturate(6151%) hue-rotate(222deg) brightness(103%) contrast(105%);
+}
+.homes:hover {
+    background-color: #1C1C1C;  
+    color: #0055FF;             
+    border-left: 4px solid #0055FF;
+    width: 90%;
+}
+.homes:hover img {
+    filter: invert(27%) sepia(91%) saturate(6151%) hue-rotate(222deg) brightness(103%) contrast(105%);
+}
+.articles:hover {
+    background-color: #1C1C1C;  
+    color: #0055FF;             
+    border-left: 4px solid #0055FF;
+    width: 90%;
+}
+.articles:hover img {
+    filter: invert(27%) sepia(91%) saturate(6151%) hue-rotate(222deg) brightness(103%) contrast(105%);
+}
+.premiums:hover {
+    background-color: #1C1C1C;  
+    color: #0055FF;             
+    border-left: 4px solid #0055FF;
+    width: 90%;
+}
+.premiums:hover img {
+    filter: invert(27%) sepia(91%) saturate(6151%) hue-rotate(222deg) brightness(103%) contrast(105%);
+}
+.settings:hover {
+    background-color: #1C1C1C;  
+    color: #0055FF;             
+    border-left: 4px solid #0055FF;
+    width: 90%;
+}
+.settings:hover img {
+    filter: invert(27%) sepia(91%) saturate(6151%) hue-rotate(222deg) brightness(103%) contrast(105%);
+}
+.questions:hover {
+    background-color: #1C1C1C;  
+    color: #0055FF;             
+    border-left: 4px solid #0055FF;
+    width: 90%;
+}
+.questions:hover img {
+    filter: invert(27%) sepia(91%) saturate(6151%) hue-rotate(222deg) brightness(103%) contrast(105%);
+}
+.lvls {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border: transparent;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.247);
+    width: 85px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -17%;
+    left: -1%;
+}
+.profiles{
+    position: relative;
+    left: 35%;
+    top: 5%;
+}
+.perso {
+    width: 25px;
+    height: fit-content;
+    filter: brightness(0) invert(1); 
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    top: 17%;
+}
+.persos {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+    left: 5%;
+    transition: 0.3s ease;
+}
+.persos:hover {
+    background-color: #1C1C1C;  
+    color: #0055FF;             
+    border-left: 4px solid #0055FF;
+    width: 90%;
+}
+.persos:hover img {
+    filter: invert(27%) sepia(91%) saturate(6151%) hue-rotate(222deg) brightness(103%) contrast(105%);
+}
+.n1{
+    border: transparent;
+    background-color: #003BFF;
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -15%;
+}
+.n3 {
+    margin-left: 10px;
+}
+.n4 {
+    margin-left: 10px;
+}
+.n5 {
+    margin-left: 10px;
+}
+.n6 {
+    margin-left: 10px;
+}
+.n7 {
+    margin-left: 10px;
+}
+.n8 {
+    margin-left: 10px;
+}
+.n9 {
+    margin-left: 10px;
+}
+@media (max-width: 768px) {
+    .logo {
+        font-size: 23px; 
+    }
+    .links {
+        display: none; 
+    }
+    #menubutton {
+        display: block; 
+    }
+    .sidebar {
+        width: 60%; 
+        left: -200%; 
+    }
+}
